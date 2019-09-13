@@ -1,0 +1,23 @@
+{
+  "name": "node-secrets-app",
+  "version": "1.0.0",
+  "description": "Open Secrets NodeJS Demo",
+  "main": "app.js",
+  "scripts": {
+    "repl": "node -e 'const repl = require(\"./src/js/nsa/repl.js\");' -i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leblowl/node-secrets-app.git"
+  },
+  "author": "Lucas Leblow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leblowl/node-secrets-app/issues"
+  },
+  "homepage": "https://github.com/leblowl/node-secrets-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
