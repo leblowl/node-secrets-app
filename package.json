@@ -4,7 +4,8 @@
   "description": "Open Secrets NodeJS Demo",
   "main": "app.js",
   "scripts": {
-    "repl": "node -e 'const repl = require(\"./src/js/nsa/repl.js\");' -i",
+    "repl": "node -e 'const repl = require(\"./src/server/repl.js\");' -i",
+    "dev": "nodemon ./src/server/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
