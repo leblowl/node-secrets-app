@@ -1,19 +1,25 @@
+import * as event from './event.js';
+
 // Legislator
 
-function selectLegislator(model, { index }) {
-  legislators = model.legislators;
+function selectLegislator(model, { ndx }) {
+  let legislators = model.legislators;
 
-  return legislators.map((leg, index) => {
-    if (index === action.index) {
-      return Object.assign({}, leg, {
-        selected: true
-      });
-    }
+  return Object.assign({}, model, {
+    'legislators': legislators.map((leg, i) => {
+      if (i === ndx) {
+        return Object.assign({}, leg, {
+          'selected': !leg.selected
+        });
+      } else {
+        return leg;
+      }
+    })
   });
 }
 
 var legislatorReducers = {
-  'legislator/selectLegislator': selectLegislator
+  [event.SELECT_LEGISLATOR]: selectLegislator
 }
 
 // App

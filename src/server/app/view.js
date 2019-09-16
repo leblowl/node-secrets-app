@@ -1,6 +1,3 @@
-// TODO: Download react.js and make it a relative JS import and use
-// different directory paths for dev & production via Express routing
-// and configuration.
 function mainPage(res) {
   res.set("Content-Type", "text/html");
   res.send(new Buffer(
@@ -14,7 +11,7 @@ function mainPage(res) {
            <link rel="stylesheet" href="css/app.css">
          </head>
          <body>
-           <div id="app_mount"></div>
+           <div id="app-mount"></div>
            <script src="js/app.js" type="module"></script>
          </body>
        </html>`

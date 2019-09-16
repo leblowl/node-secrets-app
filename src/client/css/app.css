@@ -1,4 +1,77 @@
-.test {
-    background: blue;
-    color: red;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#app-mount {
+  width: 100%;
+  height: 100%;
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legislator-list {
+  min-width: 50vw;
+  min-height: 50vh;
+  background: #fff;
+}
+
+.legislator-list .title {
+  margin: 0;
+  padding: 1em;
+  background: #efebdf;
+}
+
+.legislator-list .body {
+  padding: 1em;
+}
+
+.legislator-item {
+  padding: 1em;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.legislator-item .selector {
+  width: 1em;
+  height: 1em;
+  border: 1px solid #ccc;
+  margin-right: 1em;
+  border-radius: 4px;
+}
+
+.legislator-item .selector:hover {
+  background: #777;
+  cursor: pointer;
+}
+
+.legislator-item.selected .selector {
+  background: #777;
+}
+
+.legislator-item .name {
+  flex: 1;
 }

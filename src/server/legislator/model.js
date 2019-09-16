@@ -11,8 +11,15 @@ function importCoLegislators() {
   model['legislators'] = loadCoLegislators();
 }
 
+function getLegislators() {
+  console.log('hi ' + model);
+  console.log(model['legislators'][0]);
+  return model['legislators'];
+}
+
 module.exports = {
   model,
   loadCoLegislators,
-  importCoLegislators
+  importCoLegislators,
+  getLegislators
 };

@@ -1,30 +1,33 @@
-var express = require('express')
+var express = require('express');
 var control = require('./app/control.js');
+var route = require('./app/route.js');
 
 let app;
 let server;
 
-function init() {
+function init(app) {
   control.initModel();
-}
-
-function loadRoutes(app) {
-  app.get('/', control.getMainPage);
-  app.use(express.static('dist/client'));
+  route.loadRoutes(app);
 }
 
 function start(port=3000) {
-  init();
   app = express();
-  loadRoutes(app);
+  init(app);
   server = app.listen(port, () => console.log(`Listening on port ${port}...`));
 }
 
 function stop() {
   server.close();
+  app = null;
+}
+
+function restart() {
+  stop();
+  start();
 }
 
 module.exports = {
   start,
-  stop
+  stop,
+  restart
 };

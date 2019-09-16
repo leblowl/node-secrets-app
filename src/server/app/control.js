@@ -1,8 +1,8 @@
-var model = require('./model.js');
+var legislatorModel = require('../legislator/model.js');
 var view = require('./view.js');
 
 function initModel() {
-    model.importCoLegislators();
+    legislatorModel.importCoLegislators();
 }
 
 function getMainPage(req, res) {

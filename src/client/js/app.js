@@ -13,4 +13,4 @@ const app = function() {
            e(view.app));
 }
 
-reactDom.render(app(), document.getElementById("app_mount"));
+reactDom.render(app(), document.getElementById("app-mount"));

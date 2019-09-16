@@ -1,8 +1,10 @@
-function selectLegislator(legId) {
+const SELECT_LEGISLATOR = 'legislator/selectLegislator';
+
+function selectLegislator(ndx) {
   return {
-    type: 'SELECT_LEGISLATOR',
-    legId
+    type: SELECT_LEGISLATOR,
+    ndx
   }
 }
 
-export { selectLegislator };
+export { SELECT_LEGISLATOR, selectLegislator };
