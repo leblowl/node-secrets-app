@@ -15,8 +15,6 @@ function mainPage(res) {
          </head>
          <body>
            <div id="app_mount"></div>
-           <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-           <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
            <script src="js/app.js" type="module"></script>
          </body>
        </html>`

@@ -10,7 +10,7 @@ function init() {
 
 function loadRoutes(app) {
   app.get('/', control.getMainPage);
-  app.use(express.static('rsrc/public'));
+  app.use(express.static('dist/client'));
 }
 
 function start(port=3000) {
